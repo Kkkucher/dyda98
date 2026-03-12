@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Загрузка JSON{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card p-4">
+            <h4 class="mb-3">📤 Загрузить JSON файл</h4>
+
+            <p class="text-muted small">Формат файла:</p>
+            <pre class="bg-light p-3 rounded small">[
+  {
+    "name": "строка < 50 симв.",
+    "date": "2024-01-15_14:30"
+  },
+  ...
+]</pre>
+
+            <form method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Файл .json</label>
+                    <input type="file" name="json_file" accept=".json" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Загрузить</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
