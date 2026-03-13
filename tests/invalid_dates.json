@@ -1,0 +1,7 @@
+[
+  {"name": "valid record", "date": "2024-01-15_09:30"},
+  {"name": "wrong separator", "date": "2024-01-15 09:30"},
+  {"name": "impossible date", "date": "2024-13-99_25:61"},
+  {"name": "missing time", "date": "2024-01-15"},
+  {"name": "no name key", "dat": "2024-01-15_09:30"}
+]
