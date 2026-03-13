@@ -17,8 +17,8 @@
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone https://github.com/ВАШ_ЮЗЕР/ВАШ_РЕПО.git
-cd ВАШ_РЕПО
+git clone https://github.com/kucher/dyda98.git
+cd dyda98
 ```
 
 ### 2. Создать и активировать виртуальное окружение
@@ -44,25 +44,19 @@ mysql -u root -p
 Выполнить:
 ```sql
 CREATE DATABASE flask_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'flaskuser'@'localhost' IDENTIFIED BY 'flaskpass';
+GRANT ALL PRIVILEGES ON flask_db.* TO 'flaskuser'@'localhost';
+FLUSH PRIVILEGES;
 EXIT;
 ```
 
-### 5. Настроить подключение к БД
-
-В файле `app.py` изменить строку подключения:
-```python
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://ЮЗЕР:ПАРОЛЬ@localhost/flask_db'
-```
-
-Заменить `ЮЗЕР` и `ПАРОЛЬ` на свои данные MySQL.
-
-### 6. Запустить приложение
+### 5. Запустить приложение
 
 ```bash
 python app.py
 ```
 
-### 7. Открыть в браузере
+### 6. Открыть в браузере
 
 ```
 http://127.0.0.1:5000
