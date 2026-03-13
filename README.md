@@ -54,6 +54,8 @@ EXIT;
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://ЮЗЕР:ПАРОЛЬ@localhost/flask_db'
 ```
 
+Заменить `ЮЗЕР` и `ПАРОЛЬ` на свои данные MySQL.
+
 ### 6. Запустить приложение
 
 ```bash
